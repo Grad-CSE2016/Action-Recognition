@@ -23,14 +23,9 @@ dimensions = arr[:,1:9]
 hogHof = arr[:,9:]
 # np.savetxt("Hog_Hof.csv",hogHof , delimiter=",")
 
-print(hogHof.shape)
-
 tic = time.time()
 k_means = KMeans(n_clusters=3000,n_jobs=-1)
 k_means.fit(hogHof)
 toc = time.time()
 print((toc-tic)/60)
 pickle.dump(k_means, open('kMeanModel.pickle', 'wb'))
-# clusters = k_means.cluster_centers_
-# np.savetxt("clusters_3000.csv",clusters , delimiter=",")
-
