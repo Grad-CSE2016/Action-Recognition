@@ -4,8 +4,7 @@ import pandas as pd
 import pickle
 
 
-filenames=['actions/running_rslt.txt','actions/walking_rslt.txt','actions/jogging_rslt.txt','actions/boxing_rslt.txt','actions/handclapping_rslt.txt','actions/handwaving_rslt.txt']
-# actionCodes=range(1,7)
+filenames=['Testing/running_rslt.txt','Testing/walking_rslt.txt','Testing/jogging_rslt.txt','Testing/boxing_rslt.txt','Testing/handclapping_rslt.txt','Testing/handwaving_rslt.txt']
 
 k_means = pickle.load(open('kMeanModel.pickle', 'rb'))
 
@@ -15,7 +14,6 @@ for fName in filenames:
     f=open(fName,'rt')
     content=f.read()
     examples=content.split(',')
-    print(len(examples))
     for ex in examples:
         lines=ex.splitlines()
         pts=[]
@@ -31,6 +29,4 @@ for fName in filenames:
         BagOfWords=np.vstack([BagOfWords,Bow])
     actionCode+=1
 BagOfWords=BagOfWords[1:,:]
-np.savetxt("bagOfWords.csv",BagOfWords, delimiter=",")
-
-# print(BagOfWords[:,3000])
+np.savetxt("bagOfWords_testing.csv",BagOfWords, delimiter=",")
