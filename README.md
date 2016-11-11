@@ -23,8 +23,9 @@ I used RBF kernel for the SVM, SVM params: [gamma = 0.0002, C = 2]
 
 
 
-##Papers 
+##References 
 * On Space-Time Interest Points. [Ivan Laptev ,2004] [[PDF](www.irisa.fr/vista/Papers/2003_iccv_laptev.pdf)]
 * Evaluation of local descriptors for action recognition in videos. [Piotr Bilinski and Francois Bremond .2009] [[PDF](www.irisa.fr/vista/Papers/2009_bmvc_wang.pdf)]
+* My Bachelor's thesis "Smart Airport Surveillance System" [[PDF](https://www.researchgate.net/publication/308903971_Smart_Airport_Surveillance_System_Action_Recognition_Unattended_Object_Detection_Tracking)]
 
 
